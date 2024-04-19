@@ -37,24 +37,6 @@
   }
 }
 
-/* .lbg{
-  height: 500px;
-  width: 500px;
-  margin-left: 150px;
-  margin-top: 50px;
-}
-
-.one{
-  margin-top: 250px;
-  margin-left: 200px;
-}
-
-.h{
-  margin-left: -145px;
-  margin-top: -50px;
-}
- */
-
 
 .A{
     width:100%;
@@ -62,4 +44,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+
+
+/* .btn{
+  height: 50px;
+  width: 900px;
+  text-align: left;
+} */
+
+.nbg{
+  background-color: black;
+  height: 750px;
+  color: white;
+ 
+}
+
+.faq{
+  color:white;
+  text-align: center;
+}
+
+.flex{
+  justify-content: center;
+  
 }

@@ -1,15 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import Login from './Login';
-import Signup from './Signup'
+// import App from './App';
+// import Login from './Login';
+// import Signup from './Signup';
+
 import reportWebVitals from './reportWebVitals';
+// import Netdemo from './Netdemo';
+import Netflix from './Netflix';
+
+import App1 from './App1';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Login />
+    <App1 />
   </React.StrictMode>
 );
 
