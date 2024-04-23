@@ -1,46 +1,35 @@
-import React, { Component, useState } from "react";
-import 'bootstrap/dist/css/bootstrap.css';
 
+import React, { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.css';
+import './App.css';
 
 function App1() {
   // State variables
-  const [email, setEmail] = useState(""); // Store email input value
-  const [password, setPassword] = useState(""); // Store password input value
-  const [isVisible, setIsVisible] = useState(false); // Toggle visibility of user list table
+  const [url, seturl] = useState("");
+  const [Product_Name, setProduct_Name] = useState("");
+  const [Description, setDescription] = useState("");
+  const [price, setPrice] = useState("");
+  const [offers, setOffers] = useState("");
+  const [qty, setqty] = useState("");
 
-  const [backupData, setBackupData] = useState([]); // Store backup of original user data
-  const [search, setSearch] = useState(""); // Store search query
-  const [form, setForm] = useState([]); // Store user data entered through the form
+
+  const [isVisible, setIsVisible] = useState(false);
+  const [form, setForm] = useState([]);
 
   // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Validation checks
-    if (email === "") {
-      return alert("Please enter an email address");
-    }
-    if (password === "") {
-      return alert("Please enter a password");
-    }
-    if (password.length < 8) {
-      return alert("Password must be at least 8 characters long");
-    }
-    if (password.length > 16) {
-      return alert("Password cannot be more than 16 characters long");
-    }
-
-    // Add user data to form state array
     setIsVisible(true);
-    setForm([...form, { email: email, password: password }]);
-    setBackupData([...form, { email: email, password: password }]);
-
-    // Clear input fields
-    setEmail("");
-    setPassword("");
+    setForm([...form, { url, Product_Name, Description, price, offers,qty }]);
+    // Clear input
+    seturl("");
+    setProduct_Name("");
+    setDescription("");
+    setPrice("");
+    setOffers("");
+    setqty("");
   };
 
-  // Function to handle deletion of a user
   const handleDeleteUser = (indexOf) => {
     const status = window.confirm("Delete?");
 
@@ -50,110 +39,97 @@ function App1() {
     }
   };
 
-  // Function to handle search
-  const handleSearch = (data) => {
-    setSearch(data);
-
-    // Filter user data based on search query
-    if (data === "") {
-      setForm(backupData);
-    } else {
-      const filteredItems = form.filter((user) =>
-        user.email.toLowerCase().includes(data.toLowerCase())
-      );
-      setForm(filteredItems);
-    }
-  };
-
-  // delete function
-  // validation ( length, required )
-  // search
-
-  // toast
-  // validation
-  // modal
-  // edit
-  // localstorage
-  // filter
-  // sort
-  // paginations
-
   return (
+    <>
     <div className="A">
-      {/* Form */}
-      <div>
       <form className="form" onSubmit={handleSubmit}>
-        <h1>Add</h1>
+        <h1>Product</h1>
         <div className="form-div">
           <input
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="form-control"
+            value={url}
+            onChange={(e) => seturl(e.target.value)}
+            className="form-control "
             type="text"
-            placeholder="Email"
+            placeholder="url"
           />
         </div>
         <div className="form-div">
           <input
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={Product_Name}
+            onChange={(e) => setProduct_Name(e.target.value)}
             className="form-control mt-3"
-            type="password"
-            placeholder="Password"
+            type="text"
+            placeholder="Product Name"
+          />
+        </div>
+        <div className="form-div">
+          <input
+            value={Description}
+            onChange={(e) => setDescription(e.target.value)}
+            className="form-control mt-3"
+            type="text"
+            placeholder="Description"
+          />
+        </div>
+        <div className="form-div">
+          <input
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+            className="form-control mt-3"
+            type="text"
+            placeholder="Price"
+          />
+        </div>
+        <div className="form-div">
+          <input
+            value={offers}
+            onChange={(e) => setOffers(e.target.value)}
+            className="form-control mt-3"
+            type="text"
+            placeholder="Offers"
+          />
+        </div>
+        <div className="form-div">
+          <input
+            value={qty}
+            onChange={(e) => setqty(e.target.value)}
+            className="form-control mt-3"
+            type="text"
+            placeholder="Quantity"
           />
         </div>
         <div className="form-div">
           <input
             className="submit-btn form-filed btn btn-primary mt-3"
             type="submit"
-            placeholder="Submit"
+            value="Submit"
           />
         </div>
       </form>
-
-      {/* User list */}
-      <div className="flex">
-        {isVisible && (
-          <div>
-            {/* Search input */}
-            <input
-              type="search"
-              placeholder="Search"
-              className="form-control mt-3"
-              value={search}
-              onChange={(e) => handleSearch(e.target.value)}
-            />
-            {/* User table */}
-            <table className="mt-2">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                {form.map((item, index) => {
-                  return (
-                    <tr key={index}>
-                      <td>{index}</td>
-                      <td>{item.email}</td>
-                      <td>{item.password}</td>
-                      <td>
-                        <button className="form-control btn btn-danger ms-2" onClick={() => handleDeleteUser(index)}>
-                          Delete
-                        </button>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        )}
       </div>
-    </div>
-    </div>
+      {/* Display products */}
+      {isVisible && (
+        <div className="card-group">
+          {form.map((item, index) => (
+            <div className="card" key={index}>
+              <img src={item.url} alt={item.Product_Name} className="img-fluid h-2  w-5 mb-3" />
+              {/* <img src={item.url} className="card-img-top" alt={item.Product_Name} /> */}
+              <div className="card-body">
+                <h5 className="card-title">{item.Product_Name}</h5>
+                <p className="card-text">{item.Description}</p>
+                <p className="card-text">{item.price}</p>
+                <p className="card-text">{item.offers}</p>
+                <p className="card-text">{item.qty}</p>
+                <button className="form-control btn btn-danger ms-2" onClick={() => handleDeleteUser(index)}>
+                          Delete </button>
+
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+   
+    </>
   );
 }
 

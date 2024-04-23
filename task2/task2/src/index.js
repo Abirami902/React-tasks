@@ -7,14 +7,14 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 // import Netdemo from './Netdemo';
-import Netflix from './Netflix';
-
-import App1 from './App1';
+// import Netflix from './Netflix';
+// import App1 from './App1';
+import Nflip from './Nflip';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App1 />
+    <Nflip />
   </React.StrictMode>
 );
 

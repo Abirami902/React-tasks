@@ -37,37 +37,48 @@
   }
 }
 
-
-.A{
-    width:100%;
-    height:100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-
-/* .btn{
-  height: 50px;
-  width: 900px;
-  text-align: left;
-} */
-
-.nbg{
+/* netflix */
+/* .nbg1{
   background-color: black;
   height: 750px;
   color: white;
  
 }
 
-.faq{
+.faq1{
   color:white;
   text-align: center;
 }
 
-.flex{
-  justify-content: center;
-  
+.btn{
+  height: 50px;
+  width: 900px;
+  text-align: left;
+}   */
+
+
+/* add search delete */
+.A{
+    width:100%;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-group{
+  display: grid;
+  grid-template-columns: auto auto ;
+  align-items: center;
+}
+
+.img-fluid {
+  max-width: 50%;
+  height: auto;
+}
+
+.btn-danger{
+  height: 40px;
+  width: 100px;
 }
