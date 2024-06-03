@@ -1,0 +1,208 @@
+/* skill */
+
+.card-img-top{
+width: 50px;
+height: 50px;
+}
+
+
+.sbg{
+    background-color: rgb(2, 2, 40);
+    width: 1488px;
+    height: 150px;
+    color: white;
+    margin-top: -100px;
+}
+.head1{
+    text-align: center;
+    font-size: 80px;
+
+}
+.cont1{
+    background-color: rgb(238, 231, 160);
+    height: 500px;
+    margin-top: 70px;
+}
+.head2{
+    text-align: left;
+    font-size: 30px;
+
+}
+
+.card-img-top {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+
+/* contact */
+.contact{
+    margin-top: -70px;
+    background-color: rgba(16, 15, 15, 0.817);
+    width: 1500px;
+    height: 750px;
+}
+.para{
+    font-size: 20px;
+    color:rgb(152, 150, 150);
+    margin-left: 380px;
+}
+.head3{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(234, 227, 227);
+    text-decoration: solid;
+    margin-top: 70px;
+    margin-left: -450px;
+}
+
+.input{
+border-top: none;
+border-left: none;
+border-right: none;
+margin-left: 380px;
+width: 600px;
+margin-top: 100px;
+
+}
+.head4{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(114, 109, 109);
+    text-decoration: solid;
+    margin-top: 20px;
+    margin-left: -550px;
+}
+.para1{
+    font-size: 20px;
+    text-decoration: solid;
+    color:rgb(152, 150, 150);
+    margin-left: 370px;
+}
+
+.large-icon {
+    font-size: 60px;
+    margin-left: 450px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.large-icon:hover {
+  color:white; /* Instagram's color or any other */
+  transform: scale(1.2);
+
+}
+
+.large-icon1 {
+    font-size: 55px;
+    margin-left: 50px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.large-icon1:hover {
+  color: white; /* Instagram's color or any other */
+  transform: scale(1.2);
+
+}
+
+.large-icon2{
+    font-size: 55px;
+    margin-left: 60px;  
+    transition: color 0.3s, transform 0.3s;
+}
+
+.large-icon2:hover {
+  color: white; /* Instagram's color or any other */
+  transform: scale(1.2);
+
+}
+
+
+.large-icon3{
+    font-size: 50px;
+    margin-left: 70px;  
+    transition: color 0.3s, transform 0.3s;
+}
+
+.large-icon3:hover {
+  color: white; /* Instagram's color or any other */
+  transform: scale(1.2);
+
+}
+
+.large-icon4{
+  font-size: 40px;
+  margin-left: -30px;  
+  transition: color 0.3s, transform 0.3s;
+}
+
+.large-icon4:hover {
+color: white; /* Instagram's color or any other */
+transform: scale(1.2);
+
+}
+
+.input {
+    color: black;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 5px;
+    outline: none;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    background: none;
+  }
+  .input:focus {
+    border-bottom: 2px solid #343a40;
+  }
+  .btn-custom {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    background-color: #343a40;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-left: 140px;
+  }
+  .btn-custom:hover {
+    background-color: #495057;
+  }
+
+  .btn-custom1 {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    background-color: #343a40;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-left: 380px;
+  }
+  .btn-custom1:hover {
+    background-color: #495057;
+  }
+
+/* ........................................... */
+.abg{
+    background-color: rgb(248, 241, 245);
+    width: 1500px;
+    height: 650px;
+    color: rgb(14, 13, 13);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.name{
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -300px;
+}
+.pbg{
+    background-color: rgb(153, 117, 186);
+    width: 1500px;
+    height: 650px;
+}
+.im1{
+    margin-left: 800px;
+}
